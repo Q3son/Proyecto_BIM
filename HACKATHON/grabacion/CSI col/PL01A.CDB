@@ -1,0 +1,149 @@
+Release =CSICOL 8.4.0
+
+TYPE = Project
+ Caption = 
+ ProjType = General
+ Status = New
+ Description = 
+ Reference = P01
+ Manager = 
+ Organization = 
+ StartDate = 10/28/98
+ EndDate = 12:00:00 AM
+ Remarks = 
+ Tag = 
+
+ TYPE = DesignCriteria
+  Caption = Design Criteria
+  UnitName = Metric
+  DefaultMat = 0
+  TYPE = DesignCriteriaRC
+   DesignCode = ACI-318-99
+   DesignMethod = USD
+   RebarSetName = ASTM
+   LoadCombTableName = ACI-318-95-USD
+   ConcreteCurve = ACI-Whitney Rectangular
+   Fc = 3
+   FcBeams = 3
+   FcColumns = 4
+   FcSlabs = 3
+   FcFootings = 3
+   Fy = 4200
+   FyMain = 40
+   FySttirups = 40
+   Fu = 80
+   FuMain = 80
+   FuSttirups = 60
+   Density = 0.15
+   CoverBeamTop = 1.5
+   CoverBeamsBot = 1.5
+   CoverBeamsSide = 1
+   CoverColumns = 1.5
+   CoverSlabsTop = 0.75
+   CoverSlabsBot = 0.75
+   CoverFootingsTop = 2
+   CoverFootingsBot = 2
+  END TYPE = DesignCriteriaRC
+ END TYPE = DesignCriteria
+
+ Type = Folders
+  Caption = Gen002
+
+  TYPE = Folder
+   Caption = Gen623
+   Name = Gen622
+   Tag = 
+
+   Type = Folders
+    Caption = Gen623
+   End Type = Folders
+   StrcutureFiles = 0
+   ReportFiles = 0
+  END TYPE = Folder
+ End Type = Folders
+
+ TYPE = MaterailModelRCC
+  CAPtion = Concrete Materal Model
+  Fy = 4200
+  Fys = 2750
+  fc=250
+  TopCover=3.8175
+  BotCover=4
+   GammaCModifier=1
+   GammaSModifier=1
+   AlphaModifier=1
+
+ TYPE = StressStrainCurves
+  TYPE = StressStrainCurve
+   CAPtion = ACI-Whitney Rectangular
+   CurveType = Concrete
+   Editable = 0
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 4
+               0             0 
+               3.000001E-04                212.5 
+               0.003         212.5 
+               0.0033        0 
+  END TYPE = StressStrainCurve
+  TYPE = StressStrainCurve
+   CAPtion = PCA Parabola
+   CurveType = Concrete
+   Editable = 0
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 5
+               0             0 
+               0.0005        0.5 
+               0.001         0.8 
+               0.0015        0.85 
+               0.003         0.85 
+  END TYPE = StressStrainCurve
+  TYPE = StressStrainCurve
+   CAPtion = User Concrete Curve-1
+   CurveType = Concrete
+   Editable = -1
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 4
+               0             0 
+               0.0003        0 
+               0.0003        0.85 
+               0.003         0.85 
+  END TYPE = StressStrainCurve
+  TYPE = StressStrainCurve
+   CAPtion = User Concrete Curve-2
+   CurveType = Concrete
+   Editable = -1
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 4
+               0             0 
+               0.0003        0 
+               0.0003        0.85 
+               0.003         0.85 
+  END TYPE = StressStrainCurve
+  TYPE = StressStrainCurve
+   CAPtion = User Concrete Curve-3
+   CurveType = Concrete
+   Editable = -1
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 4
+               0             0 
+               0.0003        0 
+               0.0003        0.85 
+               0.003         0.85 
+  END TYPE = StressStrainCurve
+ END TYPE = StressStrainCurves
+ ENDTYPE=MaterailModelRCC
+END TYPE = Project
+
+ TYPE=LongColumnsComposite
+  CAPtion=
+ ENDTYPE=LongColumnsComposite

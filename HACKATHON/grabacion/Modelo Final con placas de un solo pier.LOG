@@ -1,0 +1,901 @@
+
+
+ ETABS 2016 Ultimate 64-bit 16.2.1 Build 1727 (Analysis Build 9562/64)
+ File: D:\HACKATHON\grabacion\Modelo Final con placas de un solo pier.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2026/11/26  16:00:46
+
+
+ RUNNING ANALYSIS AS A SEPARATE PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =        6255
+    WITH RESTRAINTS                        =         149
+    WITH MASS                              =        6204
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =        7225
+ NUMBER OF SHELL ELEMENTS                  =        5115
+ NUMBER OF CONSTRAINTS/WELDS               =          13
+ NUMBER OF LOAD PATTERNS                   =          12
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =          20
+ NUMBER OF MASS SOURCES                    =           4
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.711 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           8
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           8
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           8
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           8
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           8
+
+
+ E L E M E N T   F O R M A T I O N                                      16:00:46
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:00:46
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+ USING MASS SOURCE: Masa X+
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =       33579
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      836928
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ L I N E A R   S T A T I C   C A S E S                                  16:00:47
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ TOTAL NUMBER OF CASES TO SOLVE            =           4
+ NUMBER OF CASES TO SOLVE PER BLOCK        =           4
+
+ LINEAR STATIC CASES TO BE SOLVED:
+
+ CASE: CARGA MUERTA
+ CASE: CARGA VIVA
+ CASE: PESO PROPIO
+ CASE: ~LLRF
+
+
+ C E N T E R   O F   R I G I D I T Y  A N A L Y S I S                   16:00:47
+
+ CASE: ~CENTER OF RIGIDITY
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOADS                           =          39
+
+
+ Solving loads:       1 to      39
+ NUMBER OF LOADS SAVED                     =          39
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      16:00:48
+
+ CASE: AEX
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           3
+
+
+ Solving load steps:       1 to       3
+ NUMBER OF OUTPUT STEPS SAVED              =           3
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      16:00:48
+
+ CASE: AEY
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           3
+
+
+ Solving load steps:       1 to       3
+ NUMBER OF OUTPUT STEPS SAVED              =           3
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      16:00:48
+
+ CASE: MASA_X+
+
+ STARTING FROM ZERO (UNSTRESSED) INITIAL CONDITIONS
+ USING MASS SOURCE: Masa X+
+
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ INCLUDE ELASTIC MATERIAL NONLINEARITY     =         YES
+ INCLUDE INELASTIC MATERIAL NONLINEARITY   =         YES
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      16:00:48
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           2
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.29
+ TIME FOR CONTROLLING ANALYSIS             =        0.59
+ TIME FOR UPDATING LOADS AND STATE         =        0.25
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.11
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.61
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.09
+ TIME FOR DETERMINING EVENTS               =        0.01
+ TIME FOR SAVING RESULTS                   =        0.04
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        1.99
+
+
+ E L E M E N T   F O R M A T I O N                                      16:00:51
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:00:51
+
+ FORMING STIFFNESS AT THE END OF CASE: MASA_X+
+ USING MASS SOURCE: Masa X+
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =       33579
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      836928
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ R I T Z   M O D A L   A N A L Y S I S                                  16:00:52
+
+ CASE: MODAL_X+
+
+ USING STIFFNESS AT THE END OF CASE: MASA_X+
+ USING MASS SOURCE: Masa X+
+
+ NUMBER OF STIFFNESS DEGREES OF FREEDOM    =       33579
+ NUMBER OF MASS DEGREES OF FREEDOM         =        9000
+ MAXIMUM NUMBER OF RITZ MODES SOUGHT       =          42
+ MINIMUM NUMBER OF RITZ MODES SOUGHT       =           1
+ NUMBER OF STARTING VECTORS                =           3
+ VECTOR BLOCK SIZE                         =           6
+ FREQUENCY SHIFT (CENTER) (CYC/TIME)       =     .000000
+
+ NUMBER OF RITZ MODES FOUND                =          42
+ NUMBER OF GENERATION CYCLES PERFORMED     =          14
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      16:00:56
+
+ CASE: MASA_X-
+
+ STARTING FROM ZERO (UNSTRESSED) INITIAL CONDITIONS
+ USING MASS SOURCE: Masa X-
+
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ INCLUDE ELASTIC MATERIAL NONLINEARITY     =         YES
+ INCLUDE INELASTIC MATERIAL NONLINEARITY   =         YES
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      16:00:56
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           2
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.32
+ TIME FOR CONTROLLING ANALYSIS             =        0.68
+ TIME FOR UPDATING LOADS AND STATE         =        0.27
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.12
+ TIME FOR SOLVING STIFFNESS MATRIX         =        0.67
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.10
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.04
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        2.20
+
+
+ E L E M E N T   F O R M A T I O N                                      16:00:58
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:00:59
+
+ FORMING STIFFNESS AT THE END OF CASE: MASA_X-
+ USING MASS SOURCE: Masa X-
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =       33579
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      836928
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ R I T Z   M O D A L   A N A L Y S I S                                  16:00:59
+
+ CASE: MODAL_X-
+
+ USING STIFFNESS AT THE END OF CASE: MASA_X-
+ USING MASS SOURCE: Masa X-
+
+ NUMBER OF STIFFNESS DEGREES OF FREEDOM    =       33579
+ NUMBER OF MASS DEGREES OF FREEDOM         =        9000
+ MAXIMUM NUMBER OF RITZ MODES SOUGHT       =          42
+ MINIMUM NUMBER OF RITZ MODES SOUGHT       =           1
+ NUMBER OF STARTING VECTORS                =           3
+ VECTOR BLOCK SIZE                         =           6
+ FREQUENCY SHIFT (CENTER) (CYC/TIME)       =     .000000
+
+ NUMBER OF RITZ MODES FOUND                =          42
+ NUMBER OF GENERATION CYCLES PERFORMED     =          14
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      16:01:07
+
+ CASE: MASA_Y+
+
+ STARTING FROM ZERO (UNSTRESSED) INITIAL CONDITIONS
+ USING MASS SOURCE: Masa Y+
+
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ INCLUDE ELASTIC MATERIAL NONLINEARITY     =         YES
+ INCLUDE INELASTIC MATERIAL NONLINEARITY   =         YES
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      16:01:07
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           2
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.93
+ TIME FOR CONTROLLING ANALYSIS             =        1.57
+ TIME FOR UPDATING LOADS AND STATE         =        0.47
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.23
+ TIME FOR SOLVING STIFFNESS MATRIX         =        1.47
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.15
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.08
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        4.90
+
+
+ E L E M E N T   F O R M A T I O N                                      16:01:12
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:01:13
+
+ FORMING STIFFNESS AT THE END OF CASE: MASA_Y+
+ USING MASS SOURCE: Masa Y+
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =       33579
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      836928
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ R I T Z   M O D A L   A N A L Y S I S                                  16:01:14
+
+ CASE: MODAL_Y+
+
+ USING STIFFNESS AT THE END OF CASE: MASA_Y+
+ USING MASS SOURCE: Masa Y+
+
+ NUMBER OF STIFFNESS DEGREES OF FREEDOM    =       33579
+ NUMBER OF MASS DEGREES OF FREEDOM         =        9000
+ MAXIMUM NUMBER OF RITZ MODES SOUGHT       =          42
+ MINIMUM NUMBER OF RITZ MODES SOUGHT       =           1
+ NUMBER OF STARTING VECTORS                =           3
+ VECTOR BLOCK SIZE                         =           6
+ FREQUENCY SHIFT (CENTER) (CYC/TIME)       =     .000000
+
+ NUMBER OF RITZ MODES FOUND                =          42
+ NUMBER OF GENERATION CYCLES PERFORMED     =          14
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      16:01:21
+
+ CASE: MASA_Y-
+
+ STARTING FROM ZERO (UNSTRESSED) INITIAL CONDITIONS
+ USING MASS SOURCE: Masa Y-
+
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ INCLUDE ELASTIC MATERIAL NONLINEARITY     =         YES
+ INCLUDE INELASTIC MATERIAL NONLINEARITY   =         YES
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      16:01:21
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1    .000000   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =           2
+
+ TIME FOR INITIALIZING ANALYSIS            =        0.73
+ TIME FOR CONTROLLING ANALYSIS             =        2.43
+ TIME FOR UPDATING LOADS AND STATE         =        0.34
+ TIME FOR FORMING STIFFNESS MATRIX         =        0.14
+ TIME FOR SOLVING STIFFNESS MATRIX         =        1.03
+ TIME FOR CALCULATING DISPLACEMENTS        =        0.10
+ TIME FOR DETERMINING EVENTS               =        0.00
+ TIME FOR SAVING RESULTS                   =        0.07
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =        4.84
+
+
+ E L E M E N T   F O R M A T I O N                                      16:01:27
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:01:28
+
+ FORMING STIFFNESS AT THE END OF CASE: MASA_Y-
+ USING MASS SOURCE: Masa Y-
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =       33579
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      836928
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ R I T Z   M O D A L   A N A L Y S I S                                  16:01:29
+
+ CASE: MODAL_Y-
+
+ USING STIFFNESS AT THE END OF CASE: MASA_Y-
+ USING MASS SOURCE: Masa Y-
+
+ NUMBER OF STIFFNESS DEGREES OF FREEDOM    =       33579
+ NUMBER OF MASS DEGREES OF FREEDOM         =        9000
+ MAXIMUM NUMBER OF RITZ MODES SOUGHT       =          42
+ MINIMUM NUMBER OF RITZ MODES SOUGHT       =           1
+ NUMBER OF STARTING VECTORS                =           3
+ VECTOR BLOCK SIZE                         =           6
+ FREQUENCY SHIFT (CENTER) (CYC/TIME)       =     .000000
+
+ NUMBER OF RITZ MODES FOUND                =          42
+ NUMBER OF GENERATION CYCLES PERFORMED     =          14
+
+
+ N O N L I N E A R   S T A T I C   A N A L Y S I S                      16:01:41
+
+ CASE: CM SEQ
+
+ STARTING FROM ZERO (UNSTRESSED) INITIAL CONDITIONS
+ USING MASS SOURCE: Masa X+
+
+ NUMBER OF STAGES                          =          12
+ STAGES ARE CONSECUTIVE OR INDEPENDENT     = CONSECUTIVE
+ LOAD CONTROL TYPE                         =       FORCE
+ TYPE OF GEOMETRIC NONLINEARITY            =        NONE
+ INCLUDE ELASTIC MATERIAL NONLINEARITY     =         YES
+ INCLUDE INELASTIC MATERIAL NONLINEARITY   =         YES
+ USE EVENT STEPPING                        =         YES
+ USE ITERATION                             =         YES
+ USE LINE SEARCH                           =          NO
+ EVENT LUMPING TOLERANCE                   =    0.010000
+ FORCE CONVERGENCE TOLERANCE (RELATIVE)    =    0.000100
+
+
+ E L E M E N T   F O R M A T I O N                                      16:01:41
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+ CASE: CM SEQ
+ STAGE LABEL: 1
+ STAGE NUMBER 1 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   8.07E-08   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 2
+ STAGE NUMBER 2 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   8.32E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 3
+ STAGE NUMBER 3 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   1.85E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 4
+ STAGE NUMBER 4 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   4.75E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 5
+ STAGE NUMBER 5 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   6.08E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 6
+ STAGE NUMBER 6 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   7.16E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 7
+ STAGE NUMBER 7 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   7.31E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 8
+ STAGE NUMBER 8 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   9.06E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 9
+ STAGE NUMBER 9 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   8.11E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 10
+ STAGE NUMBER 10 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   7.00E-05   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 11
+ STAGE NUMBER 11 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =   Set to NO (SAVE LAST STEP ONLY)
+ ENTIRE STRUCTURE IS ACTIVE                =          NO
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   0.000107   1.000000   1.000000   1.000000
+
+ CASE: CM SEQ
+ STAGE LABEL: 12
+ STAGE NUMBER 12 OF 12 STAGES
+ OUTPUT REQUESTED FOR THIS STAGE           =         YES
+ ENTIRE STRUCTURE IS ACTIVE                =         YES
+ CHANGES TO ELEMENTS IN STRUCTURE          =    ADD ONLY
+ TIME AT BEGINNING OF STAGE (DAYS)         =     .000000
+ DURATION OF STAGE (DAYS)                  =     .000000
+
+ Negative iterations are Constant-Stiffness
+ Positive iterations are Newton-Raphson
+
+  Saved    Null   Total  Iteration   Relative  Curr Step   Curr Sum    Max Sum
+  Steps   Steps   Steps  this Step  Unbalance       Size   of Steps   of Steps
+ (    1      50     200     -10/40   1.000000   1.000000   1.000000   1.000000)
+
+      0       0       1  Conv   -1   0.000218   1.000000   1.000000   1.000000
+
+ ----------------------------------------
+ BASIC STABILITY CHECK FOR FORCE-CONTROLLED NONLINEAR STATIC LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY)
+
+    NUMBER FOUND AT FINAL CONVERGED STATE  =           0,  OK.
+ ----------------------------------------
+
+ NUMBER OF STIFFNESS FORMATIONS/SOLUTIONS  =          13
+
+ TIME FOR INITIALIZING ANALYSIS            =        1.05
+ TIME FOR CONTROLLING ANALYSIS             =        1.38
+ TIME FOR UPDATING LOADS AND STATE         =        6.61
+ TIME FOR FORMING STIFFNESS MATRIX         =        1.12
+ TIME FOR SOLVING STIFFNESS MATRIX         =       10.51
+ TIME FOR CALCULATING DISPLACEMENTS        =        1.47
+ TIME FOR DETERMINING EVENTS               =        0.07
+ TIME FOR SAVING RESULTS                   =        0.63
+                                               ----------
+ TOTAL TIME FOR THIS ANALYSIS              =       22.84
+
+
+ R E S P O N S E - S P E C T R U M   A N A L Y S I S                    16:02:04
+
+ CASE: ESPXX_MASA_Y+
+
+ TYPE OF EXCITATION                        = STANDARD GROUND ACCELERATION
+
+ USING MODES FROM CASE: MODAL_Y+
+ USING MASS SOURCE: Masa Y+
+ NUMBER OF DYNAMIC MODES TO BE USED        =          42
+
+
+ R E S P O N S E - S P E C T R U M   A N A L Y S I S                    16:02:04
+
+ CASE: ESPXX_MASA_Y-
+
+ TYPE OF EXCITATION                        = STANDARD GROUND ACCELERATION
+
+ USING MODES FROM CASE: MODAL_Y-
+ USING MASS SOURCE: Masa Y-
+ NUMBER OF DYNAMIC MODES TO BE USED        =          42
+
+
+ R E S P O N S E - S P E C T R U M   A N A L Y S I S                    16:02:04
+
+ CASE: ESPYY_MASA_X+
+
+ TYPE OF EXCITATION                        = STANDARD GROUND ACCELERATION
+
+ USING MODES FROM CASE: MODAL_X+
+ USING MASS SOURCE: Masa X+
+ NUMBER OF DYNAMIC MODES TO BE USED        =          42
+
+
+ R E S P O N S E - S P E C T R U M   A N A L Y S I S                    16:02:04
+
+ CASE: ESPYY_MASA_X-
+
+ TYPE OF EXCITATION                        = STANDARD GROUND ACCELERATION
+
+ USING MODES FROM CASE: MODAL_X-
+ USING MASS SOURCE: Masa X-
+ NUMBER OF DYNAMIC MODES TO BE USED        =          42
+
+
+ A N A L Y S I S   C O M P L E T E                          2026/11/26  16:02:04
+
+
+ ETABS 2016 Ultimate 64-bit 16.2.1 Build 1727 (Analysis Build 9562/64)
+ File: D:\HACKATHON\grabacion\Modelo Final con placas de un solo pier.LOG
+
+
+
+
+ B E G I N   A N A L Y S I S                                2026/11/26  16:02:14
+
+
+ RUNNING ANALYSIS AS A SEPARATE PROCESS
+ USING THE ADVANCED SOLVER (PROVIDES LIMITED INSTABILITY INFORMATION)
+
+ NUMBER OF JOINTS                          =        6255
+    WITH RESTRAINTS                        =         149
+    WITH MASS                              =        6204
+ NUMBER OF FRAME/CABLE/TENDON ELEMENTS     =        7225
+ NUMBER OF SHELL ELEMENTS                  =        5115
+ NUMBER OF CONSTRAINTS/WELDS               =          13
+ NUMBER OF LOAD PATTERNS                   =          12
+ NUMBER OF ACCELERATION LOADS              =           9
+ NUMBER OF LOAD CASES                      =          20
+ NUMBER OF MASS SOURCES                    =           4
+
+ ADDRESSABLE PHYSICAL MEMORY (RAM)         =       7.711 GB
+
+ PARALLELIZATION OF ANALYSIS OPERATIONS:
+ (Env. variable SAPFIRE_NUM_THREADS        =           0)
+ NUMBER OF THREADS: STATE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: STIFFNESS (AUTOMATIC)  =           8
+ NUMBER OF THREADS: EVENT (AUTOMATIC)      =           8
+ NUMBER OF THREADS: MOVE (AUTOMATIC)       =           8
+ NUMBER OF THREADS: RESPONSE (AUTOMATIC)   =           8
+ NUMBER OF THREADS: SOLVE (AUTOMATIC)      =           8
+ NUMBER OF THREADS: FORM (AUTOMATIC)       =           8
+
+
+ E L E M E N T   F O R M A T I O N                                      16:02:14
+
+
+ NUMBER OF COUPLED CONSTRAINT EQUATIONS    =           0
+
+
+ L I N E A R   E Q U A T I O N   S O L U T I O N                        16:02:15
+
+ FORMING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+ USING MASS SOURCE: Masa X+
+
+ TOTAL NUMBER OF EQUILIBRIUM EQUATIONS     =       33579
+ NUMBER OF NON-ZERO STIFFNESS TERMS        =      836928
+
+ ---------------------------------
+ BASIC STABILITY CHECK FOR LINEAR LOAD CASES:
+    NUMBER OF NEGATIVE STIFFNESS EIGENVALUES SHOULD BE ZERO FOR STABILITY.
+    (NOTE: FURTHER CHECKS SHOULD BE CONSIDERED AS DEEMED NECESSARY,
+     SUCH AS REVIEWING EIGEN MODES FOR MECHANISMS AND RIGID-BODY MOTION)
+
+    NUMBER OF NEGATIVE EIGENVALUES         =           0,  OK.
+ ---------------------------------
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      16:02:16
+
+ CASE: AEX
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           3
+
+
+ Solving load steps:       1 to       3
+ NUMBER OF OUTPUT STEPS SAVED              =           3
+
+
+ M U L T I - S T E P   L I N E A R   S T A T I C   A N A L Y S I S      16:02:17
+
+ CASE: AEY
+
+ USING STIFFNESS AT ZERO (UNSTRESSED) INITIAL CONDITIONS
+
+ NUMBER OF LOAD STEPS                      =           3
+
+
+ Solving load steps:       1 to       3
+ NUMBER OF OUTPUT STEPS SAVED              =           3
+
+
+ A N A L Y S I S   C O M P L E T E                          2026/11/26  16:02:17

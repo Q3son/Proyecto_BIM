@@ -1,0 +1,153 @@
+{
+  "_nota": "Resumen del video de diseño de la placa P2 (en L), entregado por el usuario en el chat el 2026-11-26. Copiado sin cambios en el contenido técnico.",
+  "training_domain": "Structural Engineering - Reinforced Concrete Shear Wall (Placa) Design",
+  "design_code": "Norma Técnica E.060 Concreto Armado (Peru)",
+  "case_study": {
+    "wall_id": "P2",
+    "wall_type": "Irregular L-shaped structural shear wall (Placa irregular en L)",
+    "pier_subdivisions": [
+      "P2a (horizontal leg / X-direction segment)",
+      "P2b (vertical leg / Y-direction segment)",
+      "P2 (unified composite L-section pier)"
+    ],
+    "geometry": {
+      "leg_lengths_m": { "P2a": 1.50, "P2b": 1.50 },
+      "thickness_m": 0.30,
+      "thickness_cm": 30,
+      "building_height_m": 34.50,
+      "story_elevations_example": {
+        "level_11_m": 33.25,
+        "semi_basement_depth_m": 1.25,
+        "total_height_calculation": "33.25 + 1.25 = 34.50 m"
+      }
+    },
+    "material_properties": {
+      "concrete_fc_kg_cm2": 350,
+      "note_on_upper_levels": "Concrete strength may transition to 280 kg/cm2 from Level 5 upward if specified in the model, though 350 kg/cm2 is used across the full height in this workflow.",
+      "steel_fy_kg_cm2": 4200
+    }
+  },
+  "software_toolchain": [
+    { "name": "ETABS (v2016/2018)", "role": "3D structural analysis, pier force extraction, lateral displacement check, preliminary wall reinforcing ratio, neutral axis depth (c), and compression stress extraction." },
+    { "name": "AutoCAD", "role": "Cross-section drafting, cover offsets, rebar placement layout, local-axis alignment rotation, polyline vertex extraction (LIST), and rebar coordinate extraction (DATAEXTRACTION)." },
+    { "name": "Microsoft Excel", "role": "Preliminary boundary element sizing (PREDIMENSIONAMIENTO PM.xlsx), coordinate unit conversion (m to cm), and final flexo-compression & shear verification (11. Diseño de Muros Estructurales - Flexion-corte V1.0.xlsx)." },
+    { "name": "CSiCOL", "role": "Irregular polygon section modeling, rebar arrangement definition, and generation of P-M interaction diagrams at 0° and 90°." }
+  ],
+  "design_methodology_overview": {
+    "strategy_for_irregular_walls": "For an L-shaped wall with legs in both X and Y directions, first analyze and design each leg independently (P2b in Y, P2a in X) to size web steel and boundary elements, verify each leg individually, and finally unify both legs under a single Pier label (P2) in ETABS to verify the full composite L-section in CSiCOL and Excel.",
+    "coordinate_alignment_rule": "The green local axis 2 arrow of the Pier in ETABS must always point vertically upward (+Y) in the AutoCAD/CSiCOL section coordinate system. If ETABS local axis 2 points horizontally right, rotate the AutoCAD cross-section by 90 degrees before extracting coordinates so that 0° and 90° interaction curves match ETABS M2 and M3 moment directions."
+  },
+  "step_by_step_workflow": [
+    { "step": 1, "phase": "ETABS Isolation & Force Extraction for Individual Leg (P2b)", "actions": [
+      "Open the ETABS model where the L-wall legs are assigned separate pier labels (P2a and P2b).",
+      "Isolate the vertical leg: Select -> Labels -> Pier Labels -> select 'P2b' -> right-click -> 'Show Selected Objects Only'.",
+      "Ensure full height visibility: View -> Set Building View Limits -> Top Story: N12, Bottom Story: Base.",
+      "Extract preliminary forces: Press Ctrl + T -> Tables -> Analysis Results -> Wall Output -> Pier Forces.",
+      "Filter 'Load Case/Combo' for: Carga Muerta (CM), Carga Viva (CV), Sismo Diseño X Max/Min (SDX Max, SDX Min), and Sismo Diseño Y Max/Min (SDY Max, SDY Min).",
+      "Copy the filtered Pier Forces table and paste into the 'DATOS DE ETABS' sheet of 'PREDIMENSIONAMIENTO PM.xlsx'.",
+      "Verify that the pier name ('P2b') and load case names in the Excel lookup table match the pasted ETABS strings exactly (with 'Normal' spelling); check the 'COMBINACIONES' tab to confirm values populated."
+    ]},
+    { "step": 2, "phase": "Preliminary Sizing & Boundary Element Calculation (PREDIMENSIONAMIENTO PM.xlsx)", "actions": [
+      "In the 'M. Rectangular' sheet, input material properties: fc = 350 kg/cm2, fy = 4200 kg/cm2.",
+      "Input wall leg geometry measured from AutoCAD: Length L = 150 cm, thickness b = 30 cm, total height H = 34.50 m (from ETABS Story Data: 33.25 m at N11 + 1.25 m basement).",
+      "Obtain top lateral displacement (delta_u) in ETABS: Display Deformed Shape for amplified design earthquake in the wall's primary direction ('SDY AMP' / 'DRIFT Y' for P2b), hover over the top node to read displacement = 4.6 cm.",
+      "Enter delta_u = 4.6 cm in Excel.",
+      "In ETABS, assign uniform reinforcing to P2b to obtain required steel ratio and neutral axis depth: Select P2b -> Design -> Shear Wall Design -> Assign Pier Sections -> Uniform Reinforcing -> Material: CONC350, Bar Size: #3 (3/8\"), Spacing: 0.175 m, Corner/Edge Bar Size: #6 (3/4\"), select 'Reinforcement to be Designed'.",
+      "Run Design Check: Shear Wall Design -> Start Design/Check (Shift + F10).",
+      "Display -> Design Info -> 'Pier Reinforcing Ratios'. Identify critical story (typically Base / bottom level).",
+      "Right-click the critical bottom pier to open 'ETABS 2016 Shear Wall Design' report and read:",
+      "  - Required Reinforcing Ratio = 0.0051 (minimum ratio is 0.0025).",
+      "  - Neutral axis depth (c) = max(0.4457 m, 0.55 m) = 55 cm.",
+      "  - Compression stress (Stress Compress) = 852 Ton/m2.",
+      "Enter Required Ratio = 0.0051, Minimum Ratio = 0.0025, c = 55 cm, and Compression Stress = 852 Ton/m2 into Excel.",
+      "Read Excel design outputs:",
+      "  - Web steel proposal: 2 layers (ramales) of 3/8\" bars -> required spacing ~18 cm -> adopt 17.5 cm (@ 0.175 m).",
+      "  - Boundary element requirement check: Excel confirms boundary element is required and calculates initial boundary length ~31.43 cm -> round to 30 cm initially (later increased to 40 cm for constructability/bar layout).",
+      "  - Boundary element longitudinal steel area required = 7.02 cm2 -> propose 6 bars of 5/8\" (provides 11.88 cm2 > 7.02 cm2; 7 bars used in symmetrical corner/end CAD layout)."
+    ]},
+    { "step": 3, "phase": "AutoCAD Section Drafting & Coordinate Extraction (Individual Leg P2b)", "actions": [
+      "Copy the structural wall outline from the master AutoCAD plan into a clean working file ('diseño placa p2.dwg').",
+      "Redraw wall perimeter polyline in the rebar/steel layer ('fierros'), then apply inward Offsets ('O'): 0.05 m (5 cm) and 0.03 m (3 cm) to establish cover and bar centerline guide.",
+      "Measure and mark boundary element zones of length 0.30 m initially; if the corner intersection creates tight/awkward spacing, extend boundary zones to 0.40 m (40 cm) for clean constructability.",
+      "Place circular markers ('Circle' blocks) for longitudinal bars: place bars at corners first, then distribute boundary element bars (e.g., 10 cm or 12.5 cm spacing for 3 bars along 0.25–0.40 m zone).",
+      "For the web (alma), place bars along the centerline offset at adopted spacing (0.175 m), then use 'Move' -> 'Mid Between 2 Points' (Shift + Right-Click) to center web bars symmetrically between boundary elements.",
+      "Create an individual file for leg P2b ('PL2B.dwg'): copy the L-wall, trim ('TR') to keep only leg P2b plus a small corner influence stub (40 cm flange return).",
+      "Move ('M') the bottom-left corner of P2b to world origin (0, 0, 0).",
+      "Run Data Extraction ('DX' / DATAEXTRACTION):",
+      "  - Create new data extraction -> save template as 'PL2B.dxe'.",
+      "  - Select Objects: check only 'Circle'.",
+      "  - Select Properties: filter by 'Geometry' -> check only 'Center X' and 'Center Y'.",
+      "  - Output data to external Excel file ('PL2B.xlsx').",
+      "Extract wall perimeter polygon vertices: run 'LIST' ('LI') on the outer wall polyline, copy the vertex coordinate lines from the AutoCAD text window.",
+      "Open 'PL2B.xlsx':",
+      "  - Add bar designation column ('#3' for 3/8\" base bars) and convert rebar Center X and Center Y from meters to centimeters (`=cell*100`).",
+      "  - On a new sheet ('Hoja1'), paste the LIST output, run Excel 'Text to Columns' (Texto en columnas) to separate X and Y values, and multiply X and Y by 100 to convert to centimeters."
+    ]},
+    { "step": 4, "phase": "CSiCOL Section Modeling & Flexo-Compression Verification (Individual Leg P2b)", "actions": [
+      "Open CSiCOL using an existing template ('PLACA P3.CSB'), delete the existing section shape, and save as a new project.",
+      "Click 'Add Polygon Shape by Coordinates' -> paste the wall polygon vertex X and Y coordinates (in cm) from Excel.",
+      "Double-click the polygon shape to open 'Shape Editor' -> click 'Edit Rebar' (Location of Rebars) -> paste Bar Size ('#3') and X, Y coordinates (in cm) from Excel.",
+      "In Shape Editor, select the boundary element corner/edge bars and change their diameter from #3 to #5 (5/8\"). Click OK.",
+      "Generate Interaction Diagrams: click 'Display Interaction Diagram' -> set NA Angle to '0 Deg' -> click 'Show Output' -> Copy to Clipboard.",
+      "Open design workbook ('11. Diseño de Muros Estructurales - Flexion-corte V1.0.xlsx'), go to 'CSiCOL' sheet, and paste the 0° P-M curve.",
+      "Repeat in CSiCOL for NA Angle = '90 Deg' -> Copy to Clipboard -> paste into the 90° table in Excel.",
+      "In ETABS, filter 'Pier Forces' for design load combinations: Comb1, Comb2 (Max/Min), Comb3 (Max/Min), Comb4 (Max/Min), Comb5 (Max/Min). Copy and paste into 'ETABS SELECCIÓN' sheet.",
+      "Ensure lookup names in 'ETABS SELECCIÓN' match ('Comb1', 'Comb2 Max', 'Comb2 Min', ..., 'Comb5 Min') and check that 'ETABS DEFINITIVO' populates.",
+      "In 'HOJA DE CÁLCULO 1 EJE X':",
+      "  - Set Pier = 'P2b', Story = 'N1' (or target level), L = 150 cm, b = 30 cm, fc = 350 kg/cm2, fy = 4200 kg/cm2.",
+      "  - Inspect the 'DIAGRAMA A 0°' and 'DIAGRAMA A 90°' plots: verify that all orange points (ultimate demand combinations Pu, Mu) lie completely inside the blue design interaction envelope.",
+      "Result for P2b alone: All combinations fall inside both 0° and 90° curves (compliant).",
+      "Repeat Steps 1–4 identically for the other individual leg (P2a)."
+    ]},
+    { "step": 5, "phase": "Unified Full L-Shape Wall Verification & Iterative Redesign (P2 Complete)", "actions": [
+      "Open the unified ETABS model where both legs of the wall share a single Pier label 'P2' ('Modelo Final con placas de un solo pier.EDB').",
+      "Select Pier 'P2' and isolate it ('Show Selected Objects Only').",
+      "Check local axis orientation of P2 in ETABS plan view: the green local axis 2 points to the right (+X global) instead of up (+Y global).",
+      "In AutoCAD, take the full L-shaped wall with all drafted rebars and Rotate ('RO') it by 90 degrees so its orientation aligns with ETABS local axis 2 pointing upward.",
+      "Move ('M') the bottom-left reference corner of the rotated L-wall to world origin (0, 0, 0) and save as a new drawing.",
+      "Run DATAEXTRACTION ('DX') for all circles -> export to 'P2COMPLETE.xlsx'. Run 'LIST' on the full L-polygon -> copy vertices to 'Hoja1' and convert all X, Y coordinates to centimeters (*100).",
+      "In CSiCOL, save project as 'P2 COMPLETE.CSB', clear old section, paste the full L-polygon vertex coordinates (cm), and paste all rebar coordinates (#3 base) (cm).",
+      "Assign initial boundary bar sizes in CSiCOL Shape Editor: #5 (5/8\") at all three boundary element regions (left/bottom end, central corner, right/top end) and #3 (3/8\") in the web segments.",
+      "Export 0° and 90° interaction curves from CSiCOL and paste into a new Excel workbook ('P1 COMPLETO.xlsx' / 'P2 COMPLETO.xlsx').",
+      "Extract 'Comb1' through 'Comb5 Max/Min' Pier Forces for unified Pier 'P2' from ETABS and paste into 'ETABS SELECCIÓN'. Set Pier = 'P2' in calculation sheet.",
+      "Evaluate initial interaction diagrams: Orange load points exceed/fall outside the blue interaction curve at 0° -> Design FAILS flexo-compression.",
+      "Iterative Reinforcement Upgrade in CSiCOL:",
+      "  - Iteration 1: Upgrade boundary element bars in the central/corner and upper/left flange boundary zones from #5 (5/8\") to #6 (3/4\"). Re-export 0° & 90° curves -> still slightly insufficient at 0°.",
+      "  - Iteration 2: Upgrade web bars in the upper/vertical leg from #3 (3/8\") to #4 (1/2\") and verify corner/boundary distribution (matching final CAD detail: 12Ø3/4\" at corner, 8Ø5/8\" at left/bottom end, 8Ø3/4\" at right end, web 1Ø1/2\"@.175 / @.10, hoops/ties Ø3/8\"@.10).",
+      "  - Re-export 0° & 90° curves to Excel and inspect plots until all demand points fall within the capacity envelope (add individual extra edge bars in CSiCOL if borderline points remain)."
+    ]}
+  ],
+  "extracted_engineering_parameters_and_values": {
+    "load_combinations_used": {
+      "preliminary_sizing": ["CM (Carga Muerta)", "CV (Carga Viva)", "SDX Max", "SDX Min", "SDY Max", "SDY Min"],
+      "final_verification": ["Comb1", "Comb2 Max", "Comb2 Min", "Comb3 Max", "Comb3 Min", "Comb4 Max", "Comb4 Min", "Comb5 Max", "Comb5 Min"]
+    },
+    "etabs_design_outputs_P2b": {
+      "required_reinforcing_ratio": 0.0051,
+      "minimum_reinforcing_ratio": 0.0025,
+      "neutral_axis_c_cm": 55,
+      "compression_stress_ton_m2": 852,
+      "lateral_displacement_cm": 4.6
+    },
+    "reinforcement_schedule_evolution": {
+      "initial_P2b_proposal": {
+        "web_vertical_horizontal": "2 layers Ø3/8\" @ 0.175 m",
+        "boundary_elements": "6 to 7 bars Ø5/8\" (11.88 cm2 provided vs 7.02 cm2 required)",
+        "boundary_element_length_cm": "30 cm adjusted to 40 cm"
+      },
+      "upgraded_full_L_wall_P2": {
+        "corner_boundary_zone": "12Ø3/4\" with 1Ø3/8\" + 2Ø3/8\"@.10",
+        "far_boundary_zones": "8Ø5/8\" and 8Ø3/4\" with confinement Ø3/8\"@.10",
+        "web_steel": "Ø1/2\" @ 0.175 m (and @ 0.10 m in high-demand leg) / Ø3/8\" @ 0.175 m",
+        "crossties_ganchos": "Ø3/8\" @ 0.30 m"
+      }
+    }
+  },
+  "key_agent_rules_and_troubleshooting": [
+    { "issue": "Excel lookup cells show #N/A or fail to pull ETABS Pier Forces", "solution": "Check that the Pier label string in Excel (e.g., 'P2b' vs 'P2') and Load Case/Combination names exactly match the text strings pasted from ETABS." },
+    { "issue": "ETABS Pier Forces table appears empty after Ctrl + T", "solution": "Ensure the Pier objects are actively selected in the ETABS viewport before pressing Ctrl + T, or verify Building View Limits include all stories from Base to Top." },
+    { "issue": "Boundary element length of 30 cm leaves awkward rebar clearance near L-wall corner", "solution": "Increase boundary element length to 40 cm in AutoCAD for cleaner bar spacing and tie placement." },
+    { "issue": "0° and 90° interaction diagram moments do not match ETABS M2 and M3 axes for rotated/L-walls", "solution": "Inspect ETABS local axis 2 (green arrow) orientation in plan view and rotate the AutoCAD section before coordinate extraction so local axis 2 points strictly upward (+Y)." },
+    { "issue": "Demand points fall outside the CSiCOL interaction diagram in Excel", "solution": "Identify which angle (0° or 90°) fails, increase bar diameters in CSiCOL Shape Editor (e.g., boundary #5 -> #6, web #3 -> #4) or add extra bars at high-stress edges, re-export curves, and re-check." }
+  ]
+}

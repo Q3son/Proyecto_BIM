@@ -1,0 +1,290 @@
+{
+  "verFile": "0.4.0.0",
+  "drawingDataExtractor": {
+    "settings": {
+      "fileList": {
+        "folders": {},
+        "files": {
+          "d:\\hackathon\\grabacion\\individuales\\pl2b.dwg": {
+            "original": "D:\\HACKATHON\\grabacion\\iNDIVIDUALES\\PL2B.dwg",
+            "absolute": "D:\\HACKATHON\\grabacion\\iNDIVIDUALES\\PL2B.dwg",
+            "special": "",
+            "relative": ".\\PL2B.dwg",
+            "environment": "",
+            "time": "2026-11-26T21:59:04Z",
+            "$type": "Autodesk.AutoCAD.DataExtraction.DxFileReference"
+          }
+        },
+        "xRefFiles": {},
+        "currentFile": {
+          "original": "D:\\HACKATHON\\grabacion\\iNDIVIDUALES\\PL2B.dwg",
+          "absolute": "D:\\HACKATHON\\grabacion\\iNDIVIDUALES\\PL2B.dwg",
+          "special": "",
+          "relative": ".\\PL2B.dwg",
+          "environment": "",
+          "time": "2026-11-26T21:59:04Z",
+          "$type": "Autodesk.AutoCAD.DataExtraction.DxFileReference"
+        },
+        "$type": "Autodesk.AutoCAD.DataExtraction.DxFileList"
+      },
+      "selectedTypesAndProperties": [
+        {
+          "type": "Autodesk.AutoCAD.DatabaseServices.Circle, Acdbmgd, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null",
+          "props": {
+            "AcDxObjectTypeGlobalName": {
+              "typeName": "Autodesk.AutoCAD.DatabaseServices.DBObject, Acdbmgd, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "propName": "AcDxObjectTypeGlobalName",
+              "displayName": "Name",
+              "propValueType": "System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+              "unitType": 0,
+              "$type": "Autodesk.AutoCAD.DataExtraction.DxPropertyDescriptor"
+            },
+            "AcDxObjectTypeName": {
+              "typeName": "Autodesk.AutoCAD.DatabaseServices.DBObject, Acdbmgd, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "propName": "AcDxObjectTypeName",
+              "displayName": "Name",
+              "propValueType": "System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e",
+              "unitType": 0,
+              "$type": "Autodesk.AutoCAD.DataExtraction.DxPropertyDescriptor"
+            },
+            "Center.X": {
+              "typeName": "Autodesk.AutoCAD.DatabaseServices.Circle, Acdbmgd, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "propName": "Center",
+              "displayName": "Center X",
+              "propValueType": "Autodesk.AutoCAD.Geometry.Point3d, Acdbmgd, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "unitType": 1,
+              "SubPropertyName": "X",
+              "$type": "Autodesk.AutoCAD.DataExtraction.DxSubPropertyDescriptor"
+            },
+            "Center.Y": {
+              "typeName": "Autodesk.AutoCAD.DatabaseServices.Circle, Acdbmgd, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "propName": "Center",
+              "displayName": "Center Y",
+              "propValueType": "Autodesk.AutoCAD.Geometry.Point3d, Acdbmgd, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null",
+              "unitType": 1,
+              "SubPropertyName": "Y",
+              "$type": "Autodesk.AutoCAD.DataExtraction.DxSubPropertyDescriptor"
+            }
+          },
+          "displayName": "Circle",
+          "inUse": true,
+          "$type": "Autodesk.AutoCAD.DataExtraction.DxTypeDescriptor"
+        }
+      ],
+      "selectedObjectHandles": [],
+      "extractFlags": 5,
+      "BlockNameToImageMap": {
+        "BlockReferenceTypeDescriptor.acero1": "iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFMSURBVFhHxZdZDsMgDES5/3HaQ7VH6F\u002BqkZjK8diELE4/XhzMNjaQpbXWlj8jjkmWpbV35xXUTyOOAZgIE8NiYvie3X563SPoN0QcARgYE2CyLSCMYvw4IeIIJsY9I91jmTE/7gpxdNDZRsZBj5SHe0QcXbUd5AqbZsI7Ztf6CGEmbIFHC/focLUNs2ALNnp2yjhaL1ngDc\u002Bw7VxlV5ngTeXae1ZZsAK80iobCuDRI2xcUZYlwNpX7n5vJQN3rj/5icCl4sm3ZX/LgAuXgOps44yz9asMWEW2c5WVTQju3AeyCSnAK62yoQC\u002BiKiSjSvK4RIAfoSwcYVNX0bAZ\u002BFqNl/HoHIvSPRAHO5IZuytD6PPBIArMxFGTsRhOLsn0DeNfEYAwGOaQlC2kWWW/wNTf0niSMBgHBhi\u002BPlGKHSY7ghxTIDJLNPRRojjVr6AVnDQbZAD9AAAAABJRU5ErkJggg=="
+      },
+      "$type": "Autodesk.AutoCAD.DataExtraction.DxDrawingDataExtractorSettings"
+    },
+    "$type": "Autodesk.AutoCAD.DataExtraction.DxDrawingDataExtractor"
+  },
+  "report": {
+    "strSort": "",
+    "strFilter": "",
+    "nCheckSum": 0,
+    "bGroupMatchingRows": false,
+    "ColLists": [
+      {
+        "strGlobalName": "AcDxCount",
+        "strDisplayName": "Count",
+        "strFormula": null,
+        "strDisplayedFormula": null,
+        "strFilter": "",
+        "FormatInfo": {
+          "Format": null,
+          "DataType": 1,
+          "UnitType": 0,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "OriginalFormatInfo": {
+          "Format": null,
+          "DataType": 0,
+          "UnitType": 0,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "flags": 8,
+        "subTotalMode": 0,
+        "combineMode": 0,
+        "$type": "Autodesk.AutoCAD.DataExtraction.DxColumn2"
+      },
+      {
+        "strGlobalName": "AcDxHandleData",
+        "strDisplayName": "AcDxHandleData",
+        "strFormula": null,
+        "strDisplayedFormula": null,
+        "strFilter": "",
+        "FormatInfo": {
+          "Format": null,
+          "DataType": 4,
+          "UnitType": 0,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "OriginalFormatInfo": {
+          "Format": null,
+          "DataType": 4,
+          "UnitType": 0,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "flags": 16,
+        "subTotalMode": 0,
+        "combineMode": 0,
+        "$type": "Autodesk.AutoCAD.DataExtraction.DxColumn2"
+      },
+      {
+        "strGlobalName": "AcDxObjectTypeGlobalName",
+        "strDisplayName": "Name",
+        "strFormula": null,
+        "strDisplayedFormula": null,
+        "strFilter": "",
+        "FormatInfo": {
+          "Format": null,
+          "DataType": 4,
+          "UnitType": 0,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "OriginalFormatInfo": {
+          "Format": null,
+          "DataType": 4,
+          "UnitType": 0,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "flags": 16,
+        "subTotalMode": 0,
+        "combineMode": 0,
+        "$type": "Autodesk.AutoCAD.DataExtraction.DxColumn2"
+      },
+      {
+        "strGlobalName": "AcDxObjectTypeName",
+        "strDisplayName": "Name",
+        "strFormula": null,
+        "strDisplayedFormula": null,
+        "strFilter": "",
+        "FormatInfo": {
+          "Format": null,
+          "DataType": 4,
+          "UnitType": 0,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "OriginalFormatInfo": {
+          "Format": null,
+          "DataType": 4,
+          "UnitType": 0,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "flags": 1,
+        "subTotalMode": 0,
+        "combineMode": 0,
+        "$type": "Autodesk.AutoCAD.DataExtraction.DxColumn2"
+      },
+      {
+        "strGlobalName": "Center.X",
+        "strDisplayName": "Center X",
+        "strFormula": null,
+        "strDisplayedFormula": null,
+        "strFilter": "",
+        "FormatInfo": {
+          "Format": "%lu6",
+          "DataType": 2,
+          "UnitType": 1,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "OriginalFormatInfo": {
+          "Format": "%lu6",
+          "DataType": 2,
+          "UnitType": 1,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "flags": 1,
+        "subTotalMode": 0,
+        "combineMode": 0,
+        "$type": "Autodesk.AutoCAD.DataExtraction.DxColumn2"
+      },
+      {
+        "strGlobalName": "Center.Y",
+        "strDisplayName": "Center Y",
+        "strFormula": null,
+        "strDisplayedFormula": null,
+        "strFilter": "",
+        "FormatInfo": {
+          "Format": "%lu6",
+          "DataType": 2,
+          "UnitType": 1,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "OriginalFormatInfo": {
+          "Format": "%lu6",
+          "DataType": 2,
+          "UnitType": 1,
+          "$type": "Autodesk.AutoCAD.DataExtraction.FormatInfo"
+        },
+        "flags": 1,
+        "subTotalMode": 0,
+        "combineMode": 0,
+        "$type": "Autodesk.AutoCAD.DataExtraction.DxColumn2"
+      }
+    ],
+    "bMultiSorted": false,
+    "bInAggregateMode": true,
+    "MergeSettingList": null,
+    "ColumnDataTypes": [
+      {
+        "Data": "System.Int32"
+      },
+      {
+        "Data": "System.String"
+      },
+      {
+        "Data": "System.String"
+      },
+      {
+        "Data": "System.String"
+      },
+      {
+        "Data": "System.Double"
+      },
+      {
+        "Data": "System.Double"
+      }
+    ],
+    "tblForInvalidGlobal": {},
+    "reportTable": [
+      "\u003CNewDataSet\u003E\r\n  \u003Cxs:schema id=\u0022NewDataSet\u0022 xmlns=\u0022\u0022 xmlns:xs=\u0022http://www.w3.org/2001/XMLSchema\u0022 xmlns:msdata=\u0022urn:schemas-microsoft-com:xml-msdata\u0022\u003E\r\n    \u003Cxs:element name=\u0022NewDataSet\u0022 msdata:IsDataSet=\u0022true\u0022 msdata:MainDataTable=\u0022_x0024_table_name_x0024_\u0022 msdata:UseCurrentLocale=\u0022true\u0022\u003E\r\n      \u003Cxs:complexType\u003E\r\n        \u003Cxs:choice minOccurs=\u00220\u0022 maxOccurs=\u0022unbounded\u0022\u003E\r\n          \u003Cxs:element name=\u0022_x0024_table_name_x0024_\u0022\u003E\r\n            \u003Cxs:complexType\u003E\r\n              \u003Cxs:sequence\u003E\r\n                \u003Cxs:element name=\u0022Count\u0022 type=\u0022xs:int\u0022 minOccurs=\u00220\u0022 /\u003E\r\n                \u003Cxs:element name=\u0022Name\u0022 type=\u0022xs:string\u0022 minOccurs=\u00220\u0022 /\u003E\r\n                \u003Cxs:element name=\u0022Center_x0020_X\u0022 type=\u0022xs:string\u0022 minOccurs=\u00220\u0022 /\u003E\r\n                \u003Cxs:element name=\u0022Center_x0020_Y\u0022 type=\u0022xs:string\u0022 minOccurs=\u00220\u0022 /\u003E\r\n              \u003C/xs:sequence\u003E\r\n            \u003C/xs:complexType\u003E\r\n          \u003C/xs:element\u003E\r\n        \u003C/xs:choice\u003E\r\n      \u003C/xs:complexType\u003E\r\n    \u003C/xs:element\u003E\r\n  \u003C/xs:schema\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.6035\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.0680\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.2888\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.3040\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.1554\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.0701\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.1710\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.1318\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.2001\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.3297\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.9978\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.1573\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.0270\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.3552\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.8247\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.1829\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.0906\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.3314\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.8539\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.3807\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.6808\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.4063\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.3862\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.0087\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.1884\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.0379\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.3623\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.8353\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.1644\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.8645\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.3383\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.6620\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.1404\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.6912\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.6516\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.2084\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.2716\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.1802\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.0735\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.2076\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.2345\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.3711\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.6327\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.2658\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.4186\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.2428\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.2482\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.4701\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.0564\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.0838\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.2545\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.0564\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.6181\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.1669\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.4799\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.0862\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.5091\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.2841\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.3562\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.1045\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E1.3854\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.3023\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.2208\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.2720\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.4461\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.4409\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.4049\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.1438\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.2071\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.1730\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.5176\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.2282\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.5450\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.4263\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.3471\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E1.4555\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.3143\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.4886\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n  \u003C_x0024_table_name_x0024_\u003E\r\n    \u003CCount\u003E1\u003C/Count\u003E\r\n    \u003CName\u003ECircle\u003C/Name\u003E\r\n    \u003CCenter_x0020_X\u003E0.1164\u003C/Center_x0020_X\u003E\r\n    \u003CCenter_x0020_Y\u003E0.5178\u003C/Center_x0020_Y\u003E\r\n  \u003C/_x0024_table_name_x0024_\u003E\r\n\u003C/NewDataSet\u003E"
+    ],
+    "$type": "Autodesk.AutoCAD.DataExtraction.DxReport"
+  },
+  "outputSettings": {
+    "ouputFlags": 1,
+    "fileName": "D:\\HACKATHON\\grabacion\\EXCEL DATAEX\\PL2COMPLETE.xlsx",
+    "fileOutputType": 1,
+    "tableStyleName": "",
+    "manuallySetupTable": false,
+    "tableTitle": "",
+    "titleCellStyle": "",
+    "headerCellStyle": "",
+    "dataCellStyle": "",
+    "usePropertyNameAsColumnHeader": false,
+    "$type": "Autodesk.AutoCAD.DataExtraction.DxOutputSettings"
+  },
+  "wizardSettings": {
+    "displayOptions": 27,
+    "unselectedCategiries": [
+      "3D Visualization",
+      "Drawing",
+      "General"
+    ],
+    "selectedTypeNames": [
+      "Autodesk.AutoCAD.DatabaseServices.Circle"
+    ],
+    "selectedPropertyNames": [
+      "AcDxObjectTypeGlobalName",
+      "AcDxObjectTypeName",
+      "Center.X",
+      "Center.Y"
+    ],
+    "typeNameAlias": {},
+    "propertyNameAlias": {},
+    "$type": "Autodesk.AutoCAD.DataExtraction.WizardSettings"
+  }
+}

@@ -1,0 +1,4716 @@
+Release =CSICOL 8.4.0
+
+TYPE = Project
+ Caption = 
+ ProjType = General
+ Status = New
+ Description = 
+ Reference = P01
+ Manager = 
+ Organization = 
+ StartDate = 10/28/98
+ EndDate = 12:00:00 AM
+ Remarks = 
+ Tag = 
+
+ TYPE = DesignCriteria
+  Caption = Design Criteria
+  UnitName = Metric
+  DefaultMat = 0
+  TYPE = DesignCriteriaRC
+   DesignCode = ACI-318-99
+   DesignMethod = USD
+   RebarSetName = ASTM
+   LoadCombTableName = ACI-318-95-USD
+   ConcreteCurve = ACI-Whitney Rectangular
+   Fc = 3
+   FcBeams = 3
+   FcColumns = 4
+   FcSlabs = 3
+   FcFootings = 3
+   Fy = 4200
+   FyMain = 40
+   FySttirups = 40
+   Fu = 80
+   FuMain = 80
+   FuSttirups = 60
+   Density = 0.15
+   CoverBeamTop = 1.5
+   CoverBeamsBot = 1.5
+   CoverBeamsSide = 1
+   CoverColumns = 1.5
+   CoverSlabsTop = 0.75
+   CoverSlabsBot = 0.75
+   CoverFootingsTop = 2
+   CoverFootingsBot = 2
+  END TYPE = DesignCriteriaRC
+ END TYPE = DesignCriteria
+
+ Type = Folders
+  Caption = Gen002
+
+  TYPE = Folder
+   Caption = Gen5493
+   Name = Gen778
+   Tag = 
+
+   Type = Folders
+    Caption = Gen779
+   End Type = Folders
+   StrcutureFiles = 0
+   ReportFiles = 0
+  END TYPE = Folder
+ End Type = Folders
+
+ TYPE = MaterailModelRCC
+  CAPtion = Concrete Materal Model
+  Fy = 4200
+  Fys = 2750
+  fc=250
+  TopCover=3.8175
+  BotCover=4
+   GammaCModifier=1
+   GammaSModifier=1
+   AlphaModifier=1
+
+ TYPE = StressStrainCurves
+  TYPE = StressStrainCurve
+   CAPtion = ACI-Whitney Rectangular
+   CurveType = Concrete
+   Editable = 0
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 4
+               0             0 
+               3.000001E-04                212.5 
+               0.003         212.5 
+               0.0033        0 
+  END TYPE = StressStrainCurve
+  TYPE = StressStrainCurve
+   CAPtion = PCA Parabola
+   CurveType = Concrete
+   Editable = 0
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 5
+               0             0 
+               0.0005        0.5 
+               0.001         0.8 
+               0.0015        0.85 
+               0.003         0.85 
+  END TYPE = StressStrainCurve
+  TYPE = StressStrainCurve
+   CAPtion = User Concrete Curve-1
+   CurveType = Concrete
+   Editable = -1
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 4
+               0             0 
+               0.0003        0 
+               0.0003        0.85 
+               0.003         0.85 
+  END TYPE = StressStrainCurve
+  TYPE = StressStrainCurve
+   CAPtion = User Concrete Curve-2
+   CurveType = Concrete
+   Editable = -1
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 4
+               0             0 
+               0.0003        0 
+               0.0003        0.85 
+               0.003         0.85 
+  END TYPE = StressStrainCurve
+  TYPE = StressStrainCurve
+   CAPtion = User Concrete Curve-3
+   CurveType = Concrete
+   Editable = -1
+   Multiplier = 0
+   StressInFraction = 0
+   DesignCode = 0
+   SSData = 4
+               0             0 
+               0.0003        0 
+               0.0003        0.85 
+               0.003         0.85 
+  END TYPE = StressStrainCurve
+ END TYPE = StressStrainCurves
+ ENDTYPE=MaterailModelRCC
+END TYPE = Project
+
+ TYPE=LongColumnsComposite
+  CAPtion=
+
+  TYPE = LongColumnComposite
+   CAPtion = Concreto 350
+   IncludeSlenderness = 0
+
+   TYPE = XSectionComposite
+    CAPtion = Concreto 350
+    Units = Metric
+    Main Material = Concrete
+    Sub Material = Custom
+    ConcreteFc = 350
+    ConcCover = 4
+    SteelFy = 4200
+    Emod = 282495
+    TransBarsType = Ties
+    Width = 70
+    Height = 595
+    CenterX = 18.9652
+    CenterY = 298.5417
+    Area = 20175.6
+    Ixx = 712362112
+    Iyy = 4066468.5
+    Ixy = 1046588.5
+    TorJ = 0
+    SxxT = 2402909
+    SxxB = 2386139
+    SyyR = 79680.3
+    SyyL = 214417.4
+    Zx = 0
+    Zy = 0
+    Rx = 187.9045
+    Ry = 14.19696
+
+    TYPE = ShapeGeneral
+     Caption = General Polygon
+     Category =      Category = 
+     Gen Shape Type = 3
+     Basic Shape Type = General
+     Sub Shape Type = General
+     Is Hollow = No
+     Is Champher = No
+     Is Fillet = No
+     Is Variable Flange = No
+     Is Inclined Web = No
+     Is Lipped = No
+     Is Symmetrical = No
+     Is Builtup = No
+     Has Arcs = 
+     Use As Void = 0
+     Main Material = Concrete
+     Sub Material = Custom
+     Material Type = 0
+     Shape Factor = 1
+     StressStrain Curve = ACI-Whitney Rectangular
+     Units = Metric
+     DBUnits = Metric
+     X0 = 0
+     Y0 = 0
+     Angle = 0
+     MirrorOnX = 0
+     MirrorOnY = 0
+     ConcreteFc = 350
+     SteelFy = 4200
+     Emod = 282495
+     FilletR1 = 0
+     FilletR2 = 0
+     DimGap = 0
+     
+    Control Data
+    Np = 0
+    Nb = 0
+    Nh = 0
+    Ncord = 0
+     
+    Path Data
+     
+    Horizontal Data
+     
+    Vertical Data
+     
+    X Data
+     
+    Y Data
+     
+    Horizontal Dimension
+<Dimension Notations>
+     
+    Vertical Dimension
+<Dimension Notations>
+     
+    Tessellation
+    0
+    Prop From Database=No
+    Prop Database=None
+    Prop Record No=0
+     
+    Paths =  1 
+    Path = 1
+    Weight =  1 
+    Factor =  1 
+    Tag = 
+    Points =  8 
+     67.52     0 
+     0         0 
+     0         595 
+     70        595 
+     70        565 
+     30        565 
+     30        30 
+     67.52     30 
+     
+     
+    Transformation List =  0 
+     
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 440
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 367.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 352.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 352.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 337.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 337.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 322.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 322.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 307.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 307.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 292.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 292.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 277.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 277.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 262.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 262.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 247.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 247.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 232.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 232.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 217.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 217.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 202.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 202.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 187.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 187.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 367.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 172.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 382.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 397.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 462
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 462
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 474
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 474
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 486
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 486
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 498
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 498
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 510
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 510
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 522
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 522
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 534
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 534
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 546
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 546
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 558
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 558
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 15
+      Yo = 25
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 15
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 427.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 427.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 412.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 412.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 397.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 382.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 451
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 172.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 157.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 95
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 95
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 105
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 105
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 25
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 115
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 115
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 15
+      Yo = 440
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 65
+      Yo = 580
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 580
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 15
+      Yo = 590
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 35
+      Yo = 570
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 35
+      Yo = 590
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 45
+      Yo = 570
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 45
+      Yo = 590
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 55
+      Yo = 570
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 55
+      Yo = 590
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 65
+      Yo = 570
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 65
+      Yo = 590
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 570
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 590
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 590
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 570
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 440
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 85
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 157.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 85
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 75
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 142.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 142.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 5
+      Yo = 127.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #4
+      Area = 1.29
+      Dia = 1.28
+      Area Factor = 1
+      Xo = 25
+      Yo = 127.5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 15
+      Yo = 570
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 25
+      Yo = 580
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 61.45
+      Yo = 5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 61.45
+      Yo = 25
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 49.3
+      Yo = 5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 49.3
+      Yo = 25
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 37.15
+      Yo = 5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 37.15
+      Yo = 25
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 15
+      Yo = 115
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 15
+      Yo = 5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 15
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 5
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 25
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 35
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 35
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 45
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 45
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 55
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 55
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 5
+      Yo = 65
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 65
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #6
+      Area = 2.84
+      Dia = 1.92
+      Area Factor = 1
+      Xo = 25
+      Yo = 75
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     TYPE = Rebar
+      CAPtion = #3
+      Units = Metric
+      Code = 101
+      Desig = #8
+      Area = 5.1
+      Dia = 2.55
+      Area Factor = 1
+      Xo = 5
+      Yo = 451
+      Zo = 0
+      Dims = 6
+               100 
+               0 
+               0 
+               0 
+               0 
+               0 
+      Cords = 0
+     END TYPE = Rebar
+     
+     
+    TAG = 
+    END TYPE = ShapeGeneral
+    Tag = 
+   END TYPE = XSectionComposite
+
+   TYPE=LongColumnActions
+    CAPtion=X
+
+    TYPE=LongColumnActionACI
+     CAPtion =Loads1
+     LOADCASE =Combination1
+     DISTance =0
+     Pud =20
+     M1Ns =4
+     M1s =5
+     M2Ns =3
+     M2s =6
+     PuFinal =40
+     SigmaPu =500
+     PuSway =50
+     PuNoSway =40
+     NonSway =-1
+     KNonSway =1
+     KSway =1
+     SustainedV =10
+     TotalV =15
+     IsTransLd =0
+     RelStorySway =0.05
+     SigmaPc =5000
+     SwayMethod =EQ1018
+     PuDirect =40
+     Mu1Direct =6
+     Mu2Direct =8
+     FiKForPCr =0.75
+    END TYPE=LongColumnActionACI
+   ENDTYPE=LongColumnActions
+
+   TYPE=LongColumnActions
+    CAPtion=Y
+
+    TYPE=LongColumnActionACI
+     CAPtion =Loads1
+     LOADCASE =Combination1
+     DISTance =0
+     Pud =20
+     M1Ns =-2
+     M1s =3.75
+     M2Ns =0.75
+     M2s =2.1
+     PuFinal =40
+     SigmaPu =500
+     PuSway =50
+     PuNoSway =40
+     NonSway =-1
+     KNonSway =1
+     KSway =1
+     SustainedV =10
+     TotalV =15
+     IsTransLd =0
+     RelStorySway =0.05
+     SigmaPc =5000
+     SwayMethod =EQ1018
+     PuDirect =40
+     Mu1Direct =6
+     Mu2Direct =8
+     FiKForPCr =0.75
+    END TYPE=LongColumnActionACI
+   ENDTYPE=LongColumnActions
+
+   TYPE = udtLCFraming
+    Caption =X
+    StoryHt =3.5
+    ClearLc =3
+    TopEIRatio =0
+    BotEIRatio =0
+    BracedK =1
+    UnbracedK =1
+    FramingType =4
+    FramingCase =0
+    CalcMethod =0
+    TopEndCase =0
+    BotEndCase =0
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =2.12625E+10
+     EIxModified =1.488375E+10
+     EIFactor =0.7
+     Index =T1
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRX Top Col
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =1.674422E+10
+     EIFactor =0.35
+     Index =T2
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRX Top 2
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =1.674422E+10
+     EIFactor =0.35
+     Index =T3
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRX Top 3
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =2.12625E+10
+     EIxModified =1.488375E+10
+     EIFactor =0.7
+     Index =B1
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRX Bot Col
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =1.674422E+10
+     EIFactor =0.35
+     Index =B2
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRX Bot 2
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =1.674422E+10
+     EIFactor =0.35
+     Index =B3
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRX Bot 3
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3.5
+     Location =0
+     EIxComputed =1
+     EIxModified =1
+     EIFactor =0.7
+     Index =C0
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = 
+      Units = Metric
+      Main Material = 
+      Sub Material = 
+      ConcreteFc = 0
+      ConcCover = 0
+      SteelFy = 0
+      Emod = 0
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+   END TYPE = udtLCFraming
+
+   TYPE = udtLCFraming
+    Caption =Y
+    StoryHt =3.5
+    ClearLc =3
+    TopEIRatio =0
+    BotEIRatio =0
+    BracedK =1
+    UnbracedK =1
+    FramingType =4
+    FramingCase =0
+    CalcMethod =0
+    TopEndCase =0
+    BotEndCase =0
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =3.348844E+10
+     EIFactor =0.7
+     Index =T1
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRX Top Col
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =1.674422E+10
+     EIFactor =0.35
+     Index =T2
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRY Top 2
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =1.674422E+10
+     EIFactor =0.35
+     Index =T3
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRY Top 3
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =3.348844E+10
+     EIFactor =0.7
+     Index =B1
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRX Bot Col
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =1.674422E+10
+     EIFactor =0.35
+     Index =B2
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRY Bot 2
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3
+     Location =0
+     EIxComputed =4.784062E+10
+     EIxModified =1.674422E+10
+     EIFactor =0.35
+     Index =B3
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = FRY Bot 3
+      Units = Metric
+      Main Material = Concrete
+      Sub Material = Fc=3.0
+      ConcreteFc = 250
+      ConcCover = 0
+      SteelFy = 4000
+      Emod = 236738.8
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+
+      TYPE = ShapeGeneral
+       Caption = Rectangular Shape
+       Category =        Category =        Category =        Category =        Category =        Category =        Category =        Category = Cross Section
+       Gen Shape Type = 1
+       Basic Shape Type = Rectangular
+       Sub Shape Type = Rectangular
+       Is Hollow = No
+       Is Champher = No
+       Is Fillet = No
+       Is Variable Flange = No
+       Is Inclined Web = No
+       Is Lipped = No
+       Is Symmetrical = Yes
+       Is Builtup = No
+       Has Arcs = No
+       Use As Void = 0
+       Main Material = Concrete
+       Sub Material = fc' = 3.0 ksi
+       Material Type = 0
+       Shape Factor = 1
+       StressStrain Curve = ACI-Whitney Rectangular
+       Units = Metric
+       DBUnits = US
+       X0 = 0
+       Y0 = 0
+       Angle = 0
+       MirrorOnX = 0
+       MirrorOnY = 0
+       ConcreteFc = 200
+       SteelFy = 0
+       Emod = 210000
+       FilletR1 = 0
+       FilletR2 = 0
+       DimGap = 0
+       
+      Control Data
+      Np = 1
+      Nb = 1
+      Nh = 1
+      Ncord = 4
+       
+      Path Data
+      1        4             1 
+       
+      Horizontal Data
+      B1=30
+       
+      Vertical Data
+      H1=45
+       
+      X Data
+      X1=0
+      X2=0
+      X3=B1
+      X4=B1
+       
+      Y Data
+      Y1=0
+      Y2=H1
+      Y3=H1
+      Y4=0
+       
+      Horizontal Dimension
+<Dimension Notations>
+"                                                             C-b","2","3","1"
+       
+      Vertical Dimension
+<Dimension Notations>
+"                                                             C-h","1","2","-1"
+       
+      Tessellation
+      1
+                                                               1/4
+       
+      Line Data
+      <Line Notation>
+      2        3 
+       
+      Line X Data
+                                                               X1=B1/2
+                                                               X2=B1/2
+                                                               X3=B1/2
+       
+      Line Y Data
+                                                               Y1=0
+                                                               Y2=H1/2
+                                                               Y3=H1
+       
+      Line Thickness
+      1
+                                                               T1=B1
+       
+      Line Connectivity Data
+      <Conectivity Notation>
+"                                                               1","2","T1"
+"                                                               2","3","T1"
+      Prop From Database=No
+      Prop Database=None
+      Prop Record No=0
+       
+      Paths =  1 
+      Path = 1
+      Weight =  1 
+      Factor =  1 
+      Tag = 
+      Points =  5 
+       -15    -22.5 
+       -15     22.5 
+       15      22.5 
+       15     -22.5 
+       -15    -22.5 
+       
+       
+      Transformation List =  1 
+       Rotate
+       0
+       
+       
+       
+      TAG = 
+      END TYPE = ShapeGeneral
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+
+    TYPE = udtLCMember
+     Caption =
+     Length =3.5
+     Location =0
+     EIxComputed =1
+     EIxModified =1
+     EIFactor =0.7
+     Index =C0
+     NotActive =0
+     Tag =
+
+     TYPE = XSectionComposite
+      CAPtion = 
+      Units = Metric
+      Main Material = 
+      Sub Material = 
+      ConcreteFc = 0
+      ConcCover = 0
+      SteelFy = 0
+      Emod = 0
+      TransBarsType = Ties
+      Width = 0
+      Height = 0
+      CenterX = 0
+      CenterY = 0
+      Area = 0
+      Ixx = 0
+      Iyy = 0
+      Ixy = 0
+      TorJ = 0
+      SxxT = 0
+      SxxB = 0
+      SyyR = 0
+      SyyL = 0
+      Zx = 0
+      Zy = 0
+      Rx = 0
+      Ry = 0
+      Tag = 
+     END TYPE = XSectionComposite
+    END TYPE = udtLCMember
+   END TYPE = udtLCFraming
+  EndTYPE = LongColumnComposite
+ ENDTYPE=LongColumnsComposite

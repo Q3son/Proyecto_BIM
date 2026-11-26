@@ -1,0 +1,126 @@
+{
+  "contexto_proyecto": {
+    "autor": "Jhosep Gustavo Zaa Ramirez",
+    "dominio": "Ingeniería Estructural - Diseño de edificaciones de concreto armado",
+    "elemento_objetivo": "Placas (muros estructurales de concreto armado), tanto simples (rectangulares) como complejas/irregulares (en L, C, T, E, etc.)",
+    "proposito": "Automatizar el flujo completo de diseño y detallado del acero de refuerzo en placas estructurales para un Hackathon, reduciendo un proceso manual largo y tedioso a una herramienta integrada (con apoyo de un agente de IA para criterios de distribución).",
+    "nota_tecnica_etabs": "ETABS cuenta con la herramienta 'Section Designer', pero en la práctica profesional casi no se utiliza porque no ofrece la exactitud o control requerido para este flujo."
+  },
+  "herramientas_actuales": [
+    {
+      "nombre": "ETABS",
+      "uso": "Análisis estructural del edificio completo y obtención de fuerzas internas, desplazamientos, esfuerzos de compresión y cuantías requeridas por muro (Pier)."
+    },
+    {
+      "nombre": "Excel 1 (Plantilla de predimensionamiento - ej. P4A.xlsx)",
+      "hojas": ["DATOS DE ETABS", "COMBINACIONES", "M. Rectangular"],
+      "uso": "Procesamiento inicial de cargas, cálculo de combinaciones, verificación de elementos de borde (confinamiento) y predimensionamiento preliminar del acero longitudinal."
+    },
+    {
+      "nombre": "CSICOL",
+      "uso": "Modelado exacto de la sección transversal de la placa con la distribución de acero propuesta para generar los diagramas de interacción (Curvas P-M) a 0° y 90°."
+    },
+    {
+      "nombre": "Excel 2 (Plantilla de verificación y corte - ej. Diseño P4A.xlsx)",
+      "hojas": ["CSICOL", "ETABS SELECCIÓN", "ETABS DEFINITIVO", "HOJA DE CÁLCULO EJE X"],
+      "uso": "Cruce de los puntos del diagrama de interacción de CSICOL contra las cargas últimas críticas de ETABS (verificación a flexocompresión) y cálculo del diseño por cortante (acero transversal)."
+    },
+    {
+      "nombre": "AutoCAD",
+      "uso": "Bosquejo inicial de distribución de barras/confinamiento y dibujo final de planos de detalles estructurales listos para entrega."
+    }
+  ],
+  "flujo_de_trabajo_actual": [
+    {
+      "paso": 1,
+      "fase": "Extracción de datos del modelo estructural (ETABS)",
+      "descripcion": "A partir del edificio ya modelado y analizado en ETABS, se identifican las placas (ej. P4A para una rectangular simple, o placas compuestas segmentadas por tramos).",
+      "datos_extraidos": [
+        "Fuerzas internas por caso de carga (P, V2, V3, T, M2, M3) para cada Pier.",
+        "Geometría del muro: longitud (L) y espesor (e).",
+        "Desplazamiento último.",
+        "Esfuerzo de compresión actuante.",
+        "Cuantía de acero requerida por el programa."
+      ]
+    },
+    {
+      "paso": 2,
+      "fase": "Combinaciones y predimensionamiento (Excel 1)",
+      "descripcion": "Se copian y pegan manualmente las tablas de cargas desde ETABS hacia la hoja 'DATOS DE ETABS'. La plantilla genera automáticamente las combinaciones normativas (COMB 1 a COMB 9) y, en la hoja 'M. Rectangular', se ingresan manualmente los datos geométricos, propiedades de materiales (f'c, fy), desplazamiento, esfuerzo de compresión y cuantía requerida.",
+      "calculos_realizados": [
+        "Verificación de necesidad de elementos de borde (núcleos de confinamiento) y cálculo de su longitud requerida (ej. cálculo da 48 cm -> se ajusta a 40 cm).",
+        "Estimación preliminar del acero longitudinal en núcleos (ej. probar 12 varillas de 3/4'' o 6 de 1'') comparando el área de acero propuesta vs. el área requerida.",
+        "Cálculo de espaciamiento del acero longitudinal repartido en el alma de la placa."
+      ]
+    },
+    {
+      "paso": 3,
+      "fase": "Bosquejo preliminar de sección y acero (AutoCAD)",
+      "descripcion": "Con la longitud de elemento de borde y cantidad tentativa de varillas, se dibuja la sección en AutoCAD ubicando los núcleos confinados en los extremos y las barras longitudinales distribuidas.",
+      "complejidad_muros_irregulares": "En placas irregulares (en C, E, L o con múltiples ramales), este predimensionamiento debe hacerse primero tramo por tramo y luego integrarse en un conjunto completo."
+    },
+    {
+      "paso": 4,
+      "fase": "Generación del Diagrama de Interacción (CSICOL)",
+      "descripcion": "Se exporta o recrea la sección exacta de la placa (concreto + posición y diámetro de cada barra de acero) en CSICOL (archivo .CDB).",
+      "salidas": [
+        "Diagrama de interacción (Carga axial vs. Momento) en dirección 0° y 90°.",
+        "Se copian manualmente las tablas de puntos (Load, Moment) de las curvas de interacción."
+      ]
+    },
+    {
+      "paso": 5,
+      "fase": "Verificación por Flexocompresión (Excel 2)",
+      "descripcion": "Se pegan las coordenadas del diagrama de interacción de CSICOL en la hoja 'CSICOL' y las cargas finales de ETABS en 'ETABS SELECCIÓN'/'ETABS DEFINITIVO'.",
+      "criterio_de_aceptacion": "La hoja de cálculo extrae las combinaciones más críticas y grafica los puntos de carga actuante sobre el diagrama de interacción (aplicando los factores de reducción de resistencia normativos). Si todos los puntos caen dentro de la envolvente reducida (curva azul/gris con factores de seguridad) tanto a 0° como a 90°, el acero longitudinal es válido. Si algún punto sale, se debe iterar aumentando o redistribuyendo el acero."
+    },
+    {
+      "paso": 6,
+      "fase": "Diseño por Cortante / Acero Transversal (Excel 2)",
+      "descripcion": "Una vez aprobado el acero longitudinal, se pasa a la sección de 'Diseño por Cortante' en el mismo Excel.",
+      "entradas_y_calculo": [
+        "Se define manualmente el número de ramales (ej. 2 ramales) y el diámetro de la barra transversal (ej. 3/8'').",
+        "El Excel calcula la resistencia del concreto (Vc) y del acero (Vs) para determinar el espaciamiento máximo requerido (ej. 31 cm -> se redondea constructivamente a 30 cm o 20 cm)."
+      ]
+    },
+    {
+      "paso": 7,
+      "fase": "Detallado y generación de planos finales (AutoCAD)",
+      "descripcion": "Con todos los diámetros y espaciamientos validados, se dibuja el detalle constructivo final en AutoCAD.",
+      "elementos_del_detalle": [
+        "Contorno geométrico y cotas de los tramos y zonas de confinamiento (ej. 1.10 m, 0.70 m, espesor 0.30 m).",
+        "Acero longitudinal en núcleos (ej. 16Ø3/4'', 40Ø3/4'', 12Ø3/4'').",
+        "Acero longitudinal repartido en el alma con su espaciamiento (ej. 1Ø1/2''@0.175).",
+        "Acero transversal horizontal con su espaciamiento (ej. 1Ø3/8''@0.20).",
+        "Estribos y ganchos de confinamiento en los elementos de borde (ej. 1 []Ø3/8''@.10), cumpliendo la regla normativa de que no debe haber más de 15 cm libres entre barras longitudinales confinadas en esquina/gancho."
+      ]
+    }
+  ],
+  "problemas_del_flujo_actual": [
+    "Proceso excesivamente largo y fragmentado en 5 archivos/programas distintos.",
+    "Mucho trabajo manual propenso a errores de tipeo y copiar/pegar entre tablas.",
+    "Iteración lenta: si el diagrama de interacción en el Paso 5 falla, hay que regresar al Paso 2/3, modificar AutoCAD/CSICOL y volver a exportar todo.",
+    "Escalabilidad crítica en edificios reales: lo descrito toma mucho tiempo para una sola placa rectangular simple (P4A); en placas complejas en L, C o E el esfuerzo se multiplica exponencialmente."
+  ],
+  "arquitectura_objetivo_hackathon": {
+    "objetivo_general": "Crear una solución unificada que automatice de extremo a extremo el diseño y detallado de placas a partir del modelo ETABS.",
+    "componentes_clave": [
+      {
+        "modulo": "1. Conector / Extractor de ETABS",
+        "funcion": "Extraer automáticamente vía API o archivos de salida las geometrías (Piers), cargas por combinación, desplazamientos, esfuerzos y cuantías sin copiar y pegar manualmente."
+      },
+      {
+        "modulo": "2. Motor de Cálculo Estructural (Reemplazo de Excels y CSICOL)",
+        "funcion": "Integrar en código todas las fórmulas de las hojas de cálculo (combinaciones, elementos de borde, cortante) y calcular matemáticamente el diagrama de interacción mediante iteraciones numéricas de compatibilidad de deformaciones (eliminando la dependencia manual de CSICOL)."
+      },
+      {
+        "modulo": "3. Agente de IA para Criterio de Distribución (Valor Diferencial)",
+        "funcion": "Aplicar criterio de ingeniería donde el cálculo puramente determinístico no basta: proponer la distribución óptima y constructiva de las barras de acero, ubicación de núcleos/elementos de borde en esquinas e intersecciones de muros irregulares, y armado de estribos respetando espaciamientos máximos normativos (ej. regla de los 15 cm para barras confinadas) y constructibilidad."
+      },
+      {
+        "modulo": "4. Generador Automático de Planos CAD",
+        "funcion": "Exportar directamente un archivo de AutoCAD (.DXF o .DWG) con la geometría de la placa, ubicación exacta de barras longitudinales, aceros transversales, estribos de confinamiento, cotas y etiquetas de especificaciones técnicas listas para insertar en el plano estructural final."
+      }
+    ]
+  }
+}
